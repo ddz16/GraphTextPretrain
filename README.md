@@ -50,7 +50,7 @@ Prior to the pre-training procedure, we initialize the GIN model using the Graph
   	--pretrain_datamodule.py
 	--pretrain_dataset.py
   --model
-	--gin # the GIN model
+    --gin # the GIN model
 	  --conv.py
 	  --gnn.py
 	--graphormer # the Graphormer model
