@@ -42,7 +42,7 @@ Although we only use the GIN with 5 layers and a 300-dimensional hidden size as 
 
 Prior to the pre-training procedure, we initialize the GIN model using the GraphCL checkpoint and the BERT model using the checkpoints of Sci-BERT or KV-PLM. You should download the GIN, SciBert, KVPLM checkpoint into the gin_pretrained/, bert_pretrained/, kvplm_pretrained/ folders, respectively. These checkpoints can be downloaded on [the Baidu Netdisk](https://pan.baidu.com/s/1jvMP_ysQGTMd_2sTLUD45A), the password is **1234**.
 
-```python
+```
 --GraphTextPretrain
   --data
   --graph # the folder contains the graph data
@@ -83,13 +83,13 @@ Please download the full data files on [the Baidu Netdisk](https://pan.baidu.com
 
 To jointly pretrain the text encoder (Bert which is initized by the KV-PLM checkpoint) and the graph encoder (GIN) on eight gpus, run this command:
 
-```python
+```
 python train_gin.py --batch_size=32 --accelerator='gpu' --gpus='0,1,2,3,4,5,6,7' --graph_self --max_epochs=300 --num_workers=8
 ```
 
 To jointly pretrain the text encoder (Bert which is initized by the SciBert checkpoint) and the graph encoder (GIN) on eight gpus, run this command:
 
-```python
+```
 python train_gin.py --batch_size=32 --accelerator='gpu' --gpus='0,1,2,3,4,5,6,7' --graph_self --max_epochs=300 --num_workers=8 --bert_pretrain
 ```
 
@@ -99,19 +99,19 @@ We provide two pretrained models using our method. You can download them on [the
 
 Pretrained model when Bert is initized by the **KV-PLM** checkpoint:
 
-```python
+```
 checkpoints/littlegin=graphclinit_bert=kvplm_epoch=299-step=18300.ckpt
 ```
 
 Pretrained model when Bert is initized by the **SciBert** checkpoint:
 
-```python
+```
 checkpoints/littlegin=graphclinit_bert=scibert_epoch=299-step=18300.ckpt
 ```
 
 # Citation
 
-```python
+```
 @article{su2022molecular,
   title={Natural Language-informed Understanding of Molecule Graphs},
   author={Bing Su, Dazhao Du, Zhao Yang, Yujie Zhou, Jiangmeng Li, Anyi Rao, Hao Sun, Zhiwu Lu, Ji-Rong Wen},
