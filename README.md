@@ -38,8 +38,8 @@ Although we only use the GIN with 5 layers and a 300-dimensional hidden size as 
 
 Prior to the pre-training procedure, we initialize the GIN model using the GraphCL checkpoint and the BERT model using the checkpoints of Sci-BERT or KV-PLM. You should download the GIN, SciBert, KVPLM checkpoint into the gin_pretrained/, bert_pretrained/, kvplm_pretrained/ folders, respectively. These checkpoints can be downloaded on [the Baidu Netdisk](https://pan.baidu.com/s/1jvMP_ysQGTMd_2sTLUD45A), the password is **1234**.
 
-```python
---GraphText*Pretrain*
+
+--GraphTextPretrain
 	--data
    	--graph                                  # the folder contains the graph data
   	--text                                   # the folder contains the text data
@@ -67,7 +67,7 @@ Prior to the pre-training procedure, we initialize the GIN model using the Graph
 	  --GraphAug.py                            # the functions of graph augmentation
 		--lr.py                                  # control learning rate 
 	--train_gin.py                             # the pretrain script
-```
+
 
 # ****Data****
 
