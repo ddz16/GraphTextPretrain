@@ -38,36 +38,36 @@ Although we only use the GIN with 5 layers and a 300-dimensional hidden size as 
 
 Prior to the pre-training procedure, we initialize the GIN model using the GraphCL checkpoint and the BERT model using the checkpoints of Sci-BERT or KV-PLM. You should download the GIN, SciBert, KVPLM checkpoint into the gin_pretrained/, bert_pretrained/, kvplm_pretrained/ folders, respectively. These checkpoints can be downloaded on [the Baidu Netdisk](https://pan.baidu.com/s/1jvMP_ysQGTMd_2sTLUD45A), the password is **1234**.
 
-
+```python
 --GraphTextPretrain
 	--data
-   	--graph                                  # the folder contains the graph data
-  	--text                                   # the folder contains the text data
-	--bert_pretrained                          # the folder contains SciBert checkpoint
-	--kvplm_pretrained                         # the folder contains KVPLM checkpoint
-	--gin_pretrained                           # the folder contains GIN checkpoint
-  --data_provider                            # dataset and datamodule
+   	--graph # the folder contains the graph data
+  	--textx # the folder contains the text data
+	--bert_pretrained # the folder contains SciBert checkpoint
+	--kvplm_pretrained # the folder contains KVPLM checkpoint
+	--gin_pretrained # the folder contains GIN checkpoint
+  --data_provider # dataset and datamodule
 		--pretrain_datamodule.py
 		--pretrain_dataset.py
   --model
-		--gin                                    # the GIN model
+		--ginx # the GIN model
 			--conv.py
 			--gnn.py
-		--graphormer                             # the Graphormer model
+		--graphormer # the Graphormer model
 			--graphormer_graph_encoder.py
 			--graphormer_graph_encoder_layer.py
 			--graphormer_layers.py
 			--multihead_attention.py
 	 	--bert.py
 		--gin_model.py
-		--contrastive_gin.py                     # contrastive learning
+		--contrastive_gin.pyx # contrastive learning
 		--contrastive_gin_virturalnode.py
 		--contrastive_graphformer.py
 	--utils
-	  --GraphAug.py                            # the functions of graph augmentation
-		--lr.py                                  # control learning rate 
-	--train_gin.py                             # the pretrain script
-
+	  --GraphAug.py # the functions of graph augmentation
+		--lr.py # control learning rate 
+	--train_gin.py # the pretrain script
+```
 
 # ****Data****
 
