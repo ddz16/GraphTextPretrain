@@ -32,6 +32,10 @@ pip install ogb
 pip install pytorch_lightning 
 ```
 
+# Acknowledgment
+
+This repository uses some code from [Graphormer](https://github.com/microsoft/Graphormer/). Thanks to the original authors for their work!
+
 # Directory Structure
 
 Although we only use the GIN with 5 layers and a 300-dimensional hidden size as the graph encoder, we also provide the Graphormer model and the GIN model with virtual nodes.
@@ -103,4 +107,14 @@ Pretrained model when Bert is initized by the **SciBert** checkpoint:
 
 ```python
 checkpoints/littlegin=graphclinit_bert=scibert_epoch=299-step=18300.ckpt
+```
+
+# Citation
+
+```python
+@article{su2022molecular,
+  title={Natural Language-informed Understanding of Molecule Graphs},
+  author={Bing Su, Dazhao Du, Zhao Yang, Yujie Zhou, Jiangmeng Li, Anyi Rao, Hao Sun, Zhiwu Lu, Ji-Rong Wen},
+  year={2022}
+}
 ```
