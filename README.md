@@ -47,8 +47,8 @@ Prior to the pre-training procedure, we initialize the GIN model using the Graph
   --kvplm_pretrained # the folder contains KVPLM checkpoint
   --gin_pretrained # the folder contains GIN checkpoint
   --data_provider # dataset and datamodule
-  	--pretrain_datamodule.py
-	--pretrain_dataset.py
+    --pretrain_datamodule.py
+    --pretrain_dataset.py
   --model
     --gin # the GIN model
 	  --conv.py
