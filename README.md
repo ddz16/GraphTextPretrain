@@ -40,33 +40,33 @@ Prior to the pre-training procedure, we initialize the GIN model using the Graph
 
 ```python
 --GraphTextPretrain
-	--data
-   	--graph # the folder contains the graph data
-  	--textx # the folder contains the text data
-	--bert_pretrained # the folder contains SciBert checkpoint
-	--kvplm_pretrained # the folder contains KVPLM checkpoint
-	--gin_pretrained # the folder contains GIN checkpoint
+  --data
+  --graph # the folder contains the graph data
+  --textx # the folder contains the text data
+  --bert_pretrained # the folder contains SciBert checkpoint
+  --kvplm_pretrained # the folder contains KVPLM checkpoint
+  --gin_pretrained # the folder contains GIN checkpoint
   --data_provider # dataset and datamodule
-		--pretrain_datamodule.py
-		--pretrain_dataset.py
+  	--pretrain_datamodule.py
+	--pretrain_dataset.py
   --model
-		--ginx # the GIN model
-			--conv.py
-			--gnn.py
-		--graphormer # the Graphormer model
-			--graphormer_graph_encoder.py
-			--graphormer_graph_encoder_layer.py
-			--graphormer_layers.py
-			--multihead_attention.py
-	 	--bert.py
-		--gin_model.py
-		--contrastive_gin.pyx # contrastive learning
-		--contrastive_gin_virturalnode.py
-		--contrastive_graphformer.py
-	--utils
-	  --GraphAug.py # the functions of graph augmentation
-		--lr.py # control learning rate 
-	--train_gin.py # the pretrain script
+	--gin # the GIN model
+	  --conv.py
+	  --gnn.py
+	--graphormer # the Graphormer model
+	  --graphormer_graph_encoder.py
+	  --graphormer_graph_encoder_layer.py
+	  --graphormer_layers.py
+	  --multihead_attention.py
+	--bert.py
+	--gin_model.py
+	--contrastive_gin.pyx # contrastive learning
+	--contrastive_gin_virturalnode.py
+	--contrastive_graphformer.py
+  --utils
+	--GraphAug.py # the functions of graph augmentation
+	--lr.py # control learning rate 
+  --train_gin.py # the pretrain script
 ```
 
 # ****Data****
