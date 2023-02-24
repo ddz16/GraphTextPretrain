@@ -63,11 +63,7 @@ class GINPretrainDataset(Dataset):
         #     two_text_list = random.sample(text_list, 2)
         # text_list.clear()
 
-        # print(random.sample([1,2,3,4,5,6,7,8,9,0,11,12,13,14,15,18],2))
-        if len(two_text_list[0]) > 256:
-            two_text_list[0] = two_text_list[0][:256]
-        if len(two_text_list[1]) > 256:
-            two_text_list[1] = two_text_list[1][:256]        
+        # print(random.sample([1,2,3,4,5,6,7,8,9,0,11,12,13,14,15,18],2))      
         text1, mask1 = self.tokenizer_text(two_text_list[0])
         text2, mask2 = self.tokenizer_text(two_text_list[1])
 
